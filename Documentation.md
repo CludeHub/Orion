@@ -30,7 +30,7 @@ CloseCallback = <function> - Function to execute when the window is closed.
 ## Creating a Tab
 ```lua
 local Tab = Window:MakeTab({
-	Name = "Tab 1",
+	Name = "first tab",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -56,7 +56,7 @@ You can add elements to sections the same way you would add them to a tab normal
 ## Notifying the user
 ```lua
 OrionLib:MakeNotification({
-	Name = "Title!",
+	Name = "What is the title",
 	Content = "Notification content... what will it say??",
 	Image = "rbxassetid://4483345998",
 	Time = 5
@@ -91,7 +91,7 @@ Callback = <function> - The function of the button.
 ## Creating a Checkbox toggle
 ```lua
 Tab:AddToggle({
-	Name = "This is a toggle!",
+	Name = "toggle!",
 	Default = false,
 	Callback = function(Value)
 		print(Value)
@@ -144,7 +144,7 @@ Tab:AddSlider({
 	Default = 5,
 	Color = Color3.fromRGB(255,255,255),
 	Increment = 1,
-	ValueName = "bananas",
+	ValueName = "Value",
 	Callback = function(Value)
 		print(Value)
 	end    
@@ -240,7 +240,7 @@ Bind:Set(Enum.KeyCode.E)
 Tab:AddDropdown({
 	Name = "Dropdown",
 	Default = "1",
-	Options = {"1", "2"},
+	Options = {"1", "2", "3"},
 	Callback = function(Value)
 		print(Value)
 	end    
